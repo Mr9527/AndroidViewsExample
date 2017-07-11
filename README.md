@@ -1,3 +1,5 @@
 # AndroidViewsExample
-Android 自定义View相关练习
-放置Android视图练习的仓库  gay gay  up
+Android Android视图练习仓库
+
+## canvas包
+练习基本图形的绘制 `canvas`、`paint`、`Path` 等Api的使用
