@@ -1,4 +1,4 @@
-package com.qhfax.androidviewsexample.canvas;
+package com.qhfax.androidviewsexample;
 
 import android.os.Parcel;
 import android.os.Parcelable;

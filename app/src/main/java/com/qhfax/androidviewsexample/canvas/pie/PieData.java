@@ -1,4 +1,4 @@
-package com.qhfax.androidviewsexample.canvas;
+package com.qhfax.androidviewsexample.canvas.pie;
 
 /**
  * @author chenzhaojun
@@ -18,9 +18,20 @@ public class PieData {
 
     private float angle;
 
+    private boolean isDrawLine;
+
+
     public PieData(String name, float value) {
         this.name = name;
         this.value = value;
+    }
+
+    public boolean isDrawLine() {
+        return isDrawLine;
+    }
+
+    public void setDrawLine(boolean drawLine) {
+        isDrawLine = drawLine;
     }
 
     public String getName() {

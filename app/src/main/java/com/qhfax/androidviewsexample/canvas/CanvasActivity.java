@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 
+import com.qhfax.androidviewsexample.PageData;
+import com.qhfax.androidviewsexample.PageFragment;
 import com.qhfax.androidviewsexample.R;
 import com.qhfax.androidviewsexample.databinding.ActivityCanvasBinding;
 
