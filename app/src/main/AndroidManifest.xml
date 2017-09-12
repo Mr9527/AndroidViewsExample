@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".canvas.CanvasActivity" />
-        <activity android:name=".PagerActivity"></activity>
+        <activity android:name=".indicator.PagerActivity" />
+        <activity android:name=".progress.ProgressActivity"></activity>
     </application>
 
 </manifest>

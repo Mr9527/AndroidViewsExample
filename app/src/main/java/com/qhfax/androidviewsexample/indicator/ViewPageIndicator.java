@@ -1,4 +1,4 @@
-package com.qhfax.androidviewsexample;
+package com.qhfax.androidviewsexample.indicator;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -20,6 +20,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.qhfax.androidviewsexample.R;
+import com.qhfax.androidviewsexample.SizeUtils;
 
 import java.util.ArrayList;
 import java.util.List;

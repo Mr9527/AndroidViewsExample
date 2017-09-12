@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.qhfax.androidviewsexample.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/function_recycler"
+    <ListView
+        android:id="@+id/function_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

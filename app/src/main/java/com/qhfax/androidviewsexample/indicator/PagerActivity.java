@@ -1,4 +1,4 @@
-package com.qhfax.androidviewsexample;
+package com.qhfax.androidviewsexample.indicator;
 
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
+import com.qhfax.androidviewsexample.R;
 
 import java.util.ArrayList;
 import java.util.List;
