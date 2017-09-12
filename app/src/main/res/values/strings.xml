@@ -2,5 +2,7 @@
     <string name="app_name">AndroidViewsExample</string>
     <!--canvas-->
     <string name="pie">饼图</string>
+    <string name="coordinate">坐标系</string>
+    <string name="second_order_bezier_example">二阶贝塞尔</string>
     <string name="rect">circle</string>
 </resources>

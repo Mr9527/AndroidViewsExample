@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.qhfax.androidviewsexample.canvas.BezierActivity;
 import com.qhfax.androidviewsexample.canvas.CanvasActivity;
 import com.qhfax.androidviewsexample.indicator.PagerActivity;
 import com.qhfax.androidviewsexample.progress.ProgressActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startActivity(new Intent(MainActivity.this, BezierActivity.class));
         ListView listView = (ListView) findViewById(R.id.function_list);
         listView.setDivider(null);
         listView.setAdapter(new FunctionListAdapter());
@@ -29,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     private class FunctionListAdapter extends BaseAdapter {
 
         FunctionListAdapter() {
-
         }
 
         @Override
