@@ -15,13 +15,12 @@ import com.qhfax.androidviewsexample.indicator.PagerActivity;
 import com.qhfax.androidviewsexample.progress.ProgressActivity;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String[] TITLES = {"canvas", "progress", "indicator"};
+    public static final String[] TITLES = {"canvas", "progress", "indicator", "bezier"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startActivity(new Intent(MainActivity.this, BezierActivity.class));
         ListView listView = (ListView) findViewById(R.id.function_list);
         listView.setDivider(null);
         listView.setAdapter(new FunctionListAdapter());
@@ -78,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 2:
                             intent.setClass(MainActivity.this, PagerActivity.class);
+                            break;
+                        case 3:
+                            intent.setClass(MainActivity.this, BezierActivity.class);
                             break;
                         default:
                             throw new NullPointerException("No in listView register this activity");

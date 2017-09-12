@@ -26,7 +26,6 @@ public class CanvasActivity extends AppCompatActivity {
         mListMode = new ArrayList<>();
         mListMode.add(new PageData(getString(R.string.pie), R.layout.layout_practice_pie));
         mListMode.add(new PageData(getString(R.string.coordinate), R.layout.layout_coordinate_view));
-        mListMode.add(new PageData(getString(R.string.second_order_bezier_example), R.layout.layout_second_order_bezier));
         bind.viewPager.setAdapter(new TabPageAdapter(getSupportFragmentManager()));
         bind.tab.setupWithViewPager(bind.viewPager);
     }

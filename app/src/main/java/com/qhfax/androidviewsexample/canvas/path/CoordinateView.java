@@ -12,8 +12,6 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.qhfax.androidviewsexample.SizeUtils;
-
 /**
  * @author chenzhaojun
  * @date 2017/9/12
@@ -21,7 +19,8 @@ import com.qhfax.androidviewsexample.SizeUtils;
  */
 
 public class CoordinateView extends View {
-    private final static String PROMPT = "100";
+    private final static String CIRCLE_COORDINATE_PROMPT = "100";
+    private final static String CIRCLE_RADIUS_PROMPT = "80";
 
     private int width;
     private int height;
@@ -67,7 +66,8 @@ public class CoordinateView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.translate(format(150), format(150));
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.translate(300, 300);
         //绘制色块
         mPaint.setColor(Color.GRAY);
         canvas.drawRect(mCanvasRect, mPaint);
@@ -100,12 +100,25 @@ public class CoordinateView extends View {
 
         //绘制文本
         mPaint.setColor(Color.DKGRAY);
-        mPaint.getTextBounds(PROMPT, 0, PROMPT.length(), mTextRect);
-        canvas.drawText(PROMPT, 100 - mTextRect.right / 2, -10, mPaint);
-        canvas.drawText(PROMPT, -mTextRect.right - 10, 100 + mTextRect.bottom, mPaint);
+        mPaint.getTextBounds(CIRCLE_COORDINATE_PROMPT, 0, CIRCLE_COORDINATE_PROMPT.length(), mTextRect);
+        canvas.drawText(CIRCLE_COORDINATE_PROMPT, 100 - mTextRect.right / 2, -10, mPaint);
+        canvas.drawText(CIRCLE_COORDINATE_PROMPT, -mTextRect.right - 10, 100 + mTextRect.bottom, mPaint);
+
+
+        //三阶贝塞尔
+        mPaint.setColor(Color.WHITE);
+        mPaint.setStrokeWidth(1);
+        mPaint.setStyle(Paint.Style.STROKE);
+        mTrianglePath.reset();
+        mTrianglePath.moveTo(100, 100);
+        mTrianglePath.cubicTo(110, 115, 125, 100, 140, 110);
+        canvas.drawPath(mTrianglePath, mPaint);
+        mTrianglePath.reset();
+        mTrianglePath.moveTo(180, 100);
+        mTrianglePath.cubicTo(170, 115, 165, 100, 140, 110);
+        canvas.drawPath(mTrianglePath, mPaint);
+        mPaint.getTextBounds(CIRCLE_RADIUS_PROMPT, 0, CIRCLE_RADIUS_PROMPT.length(), mTextRect);
+        canvas.drawText(CIRCLE_RADIUS_PROMPT, 140 - mTextRect.right / 2, 130, mPaint);
     }
 
-    int format(float size) {
-        return SizeUtils.dp2px(getContext(), size);
-    }
 }

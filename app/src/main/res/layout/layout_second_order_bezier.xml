@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.qhfax.androidviewsexample.canvas.path.BezierView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</com.qhfax.androidviewsexample.canvas.path.BezierView>
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="20dp">
+
+        <RadioButton
+            android:id="@+id/second_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="二阶贝塞尔" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/third_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三阶贝塞尔" />
+    </RadioGroup>
+
+    <com.qhfax.androidviewsexample.canvas.path.BezierView
+        android:id="@+id/bezier"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
