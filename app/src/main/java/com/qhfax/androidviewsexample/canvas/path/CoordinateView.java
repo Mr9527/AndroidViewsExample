@@ -54,6 +54,8 @@ public class CoordinateView extends View {
         mEffectPaint.setPathEffect(pathEffect);
         mCanvasRect = new RectF(3, 3, 300, 300);
         mTextRect = new Rect();
+        setScaleX(2);
+        setScaleY(2);
     }
 
     @Override
@@ -67,7 +69,7 @@ public class CoordinateView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mPaint.setStyle(Paint.Style.FILL);
-        canvas.translate(300, 300);
+        canvas.translate(350, 550);
         //绘制色块
         mPaint.setColor(Color.GRAY);
         canvas.drawRect(mCanvasRect, mPaint);

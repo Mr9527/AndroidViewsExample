@@ -24,7 +24,7 @@ public class BezierView extends View {
 
     public static final int SECOND_ORDER_BEZIER = 1;
     public static final int THIRD_ORDER_BEZIER = 2;
-    private boolean isFirstContrl;
+    private boolean isFirstControl;
 
     @IntDef({SECOND_ORDER_BEZIER, THIRD_ORDER_BEZIER})
     @Retention(RetentionPolicy.SOURCE)
@@ -90,10 +90,10 @@ public class BezierView extends View {
         float y = event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                isFirstContrl = Math.abs(x - control.x) <= 50 && Math.abs(y - control.y) <= 50;
+                isFirstControl = Math.abs(x - control.x) <= 50 && Math.abs(y - control.y) <= 50;
                 break;
             case MotionEvent.ACTION_MOVE:
-                if (type == SECOND_ORDER_BEZIER || isFirstContrl) {
+                if (type == SECOND_ORDER_BEZIER || isFirstControl) {
                     control.x = x;
                     control.y = y;
                 } else {
